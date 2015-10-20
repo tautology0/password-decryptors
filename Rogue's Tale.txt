@@ -1,0 +1,7 @@
+The password is stored in %USERPROFILE%\documents\Rogue's Tale\users\username.userdata.
+
+The password is stored in a single XML-like line e.g.:
+
+<user username="Testing" password="8be3c943b1609fffbfc51aad666d0a04adf83c9d"/>
+
+The password is stored as SHA1(password) and can be cracked using hash type 100 from hashcat.
