@@ -16,12 +16,12 @@ def xorstring(s, k):
    return "".join(chr(ord(x) ^ ord(y)) for x, y in zip(s,k))
 
 # Pass the encoded password as $ARG1
-b64pw = sys.argv[1]
-
-if not b64pw:
+if len(sys.argv) < 2:
    print "No password passed"
    print "Syntax: " + sys.argv[0] + " <encoded password>"
    sys.exit(1)
+else:
+   b64pw = sys.argv[1]
 
 cookedpw=b64decode(b64pw)
 rawpw=xorstring(cookedpw, key)
